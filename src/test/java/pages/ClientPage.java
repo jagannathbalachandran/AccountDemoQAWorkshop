@@ -1,13 +1,17 @@
 package pages;
 
+import com.thoughtworks.selenium.webdriven.commands.WaitForCondition;
 import entities.ClientDetails;
 import entities.QuotationDetails;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by jbalacha on 15/10/15.
@@ -40,6 +44,9 @@ public class ClientPage {
     @FindBy(id = "quotation_event_name")
     private WebElement quotation_event_name_textbox;
 
+    @FindBy(id = "quotation_event_date")
+    private WebElement quotation_event_date_calendar;
+
 
         public ClientPage(WebDriver webDriver) {
             this.webDriver = webDriver;
@@ -53,8 +60,6 @@ public class ClientPage {
         client_address_textbox.clear();
         client_address_textbox.sendKeys(details.getAddress());
         update_button.click();
-        Alert alert = webDriver.switchTo().alert();
-        alert.accept();
     }
 
     public void editClientDetails(String contact , String address) {
@@ -64,8 +69,6 @@ public class ClientPage {
         client_address_textbox.clear();
         client_address_textbox.sendKeys(address);
         update_button.click();
-        Alert alert = webDriver.switchTo().alert();
-        alert.accept();
     }
 
     public void addQuotation(String client_contact , String address) {
@@ -75,9 +78,10 @@ public class ClientPage {
         quotation_order_placed_by_textbox.sendKeys(client_contact);
         quotation_event_name_textbox.clear();
         quotation_event_name_textbox.sendKeys(address);
+        quotation_event_date_calendar.sendKeys("21-10-2015");
         update_button.click();
-        Alert alert = webDriver.switchTo().alert();
-        alert.accept();
+        Alert alert = new WebDriverWait(webDriver, 10).until(ExpectedConditions.alertIsPresent());
+        webDriver.switchTo().alert().accept();
     }
 
 
@@ -88,9 +92,10 @@ public class ClientPage {
         quotation_order_placed_by_textbox.sendKeys(qDetails.getContact());
         quotation_event_name_textbox.clear();
         quotation_event_name_textbox.sendKeys(qDetails.getAddress());
+        quotation_event_date_calendar.sendKeys("21-10-2015");
         update_button.click();
-        Alert alert = webDriver.switchTo().alert();
-        alert.accept();
+        Alert alert = new WebDriverWait(webDriver, 10).until(ExpectedConditions.alertIsPresent());
+        webDriver.switchTo().alert().accept();
 
     }
 }

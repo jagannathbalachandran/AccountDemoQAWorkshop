@@ -1,12 +1,14 @@
 package tests;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.openqa.selenium.By;
 
 public class PaymentTestExtendingBaseTestReadingFromConfigFileStep4 extends BaseTestCaseWithReadingFromConfigFileStep4 {
 
 
     @Test
+    @Category(Regression.class)
     public void testPaymentForAClient() {
 
         selectClient("tcs");

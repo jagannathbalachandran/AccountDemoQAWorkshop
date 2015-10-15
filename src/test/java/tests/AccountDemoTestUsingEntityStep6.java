@@ -3,14 +3,14 @@ package tests;
 import entities.ClientDetails;
 import entities.QuotationDetails;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
+import org.junit.experimental.categories.Category;
 import pages.ClientPage;
-import workflows.ClientWorkflows;
 
 public class AccountDemoTestUsingEntityStep6 extends BaseTestCaseUsingPOStep5 {
 
 
     @Test
+    @Category(Smoke.class)
     public void testEditAccount() {
         ClientPage clientPage = homePage.selectClient("tcs");
         ClientDetails details = new ClientDetails("Jaggu" , "Mantri Woodlands , near Arakere gate");
@@ -18,6 +18,7 @@ public class AccountDemoTestUsingEntityStep6 extends BaseTestCaseUsingPOStep5 {
     }
 
     @Test
+    @Category(Smoke.class)
     public void testAddQuotationForClient() {
 
         ClientPage clientPage = homePage.selectClient("tcs");
