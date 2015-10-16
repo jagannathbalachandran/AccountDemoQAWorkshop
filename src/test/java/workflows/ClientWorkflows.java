@@ -4,7 +4,7 @@ import entities.ClientDetails;
 import entities.QuotationDetails;
 import org.openqa.selenium.WebDriver;
 import pages.ClientPage;
-import pages.HomePage;
+import pages.ClientsHomePage;
 import pages.LoginPage;
 
 /**
@@ -13,11 +13,11 @@ import pages.LoginPage;
 public class ClientWorkflows {
 
     WebDriver driver ;
-    HomePage homePage;
+    ClientsHomePage homePage;
 
     public ClientWorkflows(WebDriver driver) {
         this.driver = driver;
-        homePage = new HomePage(driver);
+        homePage = new ClientsHomePage(driver);
     }
 
     public void editClient(String clientName, ClientDetails newClientDetails){
