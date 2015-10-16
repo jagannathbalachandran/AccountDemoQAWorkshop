@@ -33,7 +33,6 @@ public class BaseTestCaseWithReadingFromConfigFileStep4{
 
         driver.close();
         driver.quit();
-
     }
 
     protected WebDriver getAppropriateDriver()  {

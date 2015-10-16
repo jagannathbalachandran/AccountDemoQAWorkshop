@@ -22,7 +22,6 @@ public class AccountDemoTestUsingWorkFlowsStep7 extends BaseTestCaseUsingPOStep5
         clientWorkflows = new ClientWorkflows(driver);
     }
 
-
     @Test
     @Category(Smoke.class)
     public void testEditAccount() {

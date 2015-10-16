@@ -3,7 +3,6 @@ package pages;
 import com.thoughtworks.selenium.webdriven.commands.WaitForCondition;
 import entities.ClientDetails;
 import entities.QuotationDetails;
-import org.fluentlenium.core.FluentPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +18,7 @@ import static junit.framework.TestCase.assertTrue;
 /**
  * Created by jbalacha on 15/10/15.
  */
+
 public class ClientPage {
 
         private WebDriver webDriver;

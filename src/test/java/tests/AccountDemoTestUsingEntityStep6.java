@@ -9,6 +9,7 @@ import pages.ClientPage;
 public class AccountDemoTestUsingEntityStep6 extends BaseTestCaseUsingPOStep5{
 
 
+
     @Test
     @Category(Smoke.class)
     public void testEditAccount() {

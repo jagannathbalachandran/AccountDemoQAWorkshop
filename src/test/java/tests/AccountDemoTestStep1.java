@@ -27,9 +27,7 @@ public class AccountDemoTestStep1 {
         driver.findElement(By.id("client_contact_person_name")).sendKeys("Jaggu");
         driver.findElement(By.id("client_address")).sendKeys("Mantri Woodlands , near Arakere gate");
         driver.findElement(By.name("commit")).click();
-
     }
-
 
     @Test
     public void testAddQuotationForClient() {
@@ -48,7 +46,6 @@ public class AccountDemoTestStep1 {
         driver.findElement(By.id("quotation_order_placed_by")).sendKeys("Mr.Raju");
         driver.findElement(By.id("quotation_event_name")).sendKeys("Nasscom Product Conclave");
         driver.findElement(By.name("commit")).click();
-
     }
 
 }

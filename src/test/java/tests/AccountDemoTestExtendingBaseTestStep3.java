@@ -2,6 +2,7 @@ package tests;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import pages.ClientsHomePage;
 
 public class AccountDemoTestExtendingBaseTestStep3 extends BaseTestCaseStep3 {
 
@@ -15,7 +16,6 @@ public class AccountDemoTestExtendingBaseTestStep3 extends BaseTestCaseStep3 {
         driver.findElement(By.id("client_contact_person_name")).sendKeys("Jaggu");
         driver.findElement(By.id("client_address")).sendKeys("Mantri Woodlands , near Arakere gate");
         driver.findElement(By.name("commit")).click();
-
     }
 
     @Test

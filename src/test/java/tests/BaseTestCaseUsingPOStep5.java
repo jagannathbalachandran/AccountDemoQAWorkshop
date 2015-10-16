@@ -1,8 +1,8 @@
 package tests;
 
-import org.fluentlenium.adapter.FluentTest;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,11 +20,13 @@ public class BaseTestCaseUsingPOStep5{
     ClientsHomePage clientsHomePage;
 
 
+
     @Before
     public void setUp(){
         propertyReader = new PropertyReader();
         driver = getAppropriateDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
 
         loginPage = new LoginPage(driver);
         loginPage.navigateToLoginPage(propertyReader.readProperty("url"));

@@ -1,6 +1,5 @@
 package pages;
 
-import org.fluentlenium.core.FluentPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +20,7 @@ public class ClientsHomePage {
         @FindBy(id = "search")
         private WebElement search_textbox;
 
-        @FindBy(className = "searchBtn")
+        @FindBy(className = "searchBtn123")
         private WebElement search_button;
 
         @FindBy(linkText = "Select Client")
