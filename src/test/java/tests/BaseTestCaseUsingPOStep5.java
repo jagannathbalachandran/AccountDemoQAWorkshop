@@ -1,23 +1,23 @@
 package tests;
 
+import org.fluentlenium.adapter.FluentTest;
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import pages.HomePage;
+import pages.ClientsHomePage;
 import pages.LoginPage;
 import util.PropertyReader;
 
 import java.util.concurrent.TimeUnit;
 
-public class BaseTestCaseUsingPOStep5 {
+public class BaseTestCaseUsingPOStep5{
 
     WebDriver driver;
     PropertyReader propertyReader;
     LoginPage loginPage;
-    HomePage homePage;
+    ClientsHomePage clientsHomePage;
 
 
     @Before
@@ -29,8 +29,7 @@ public class BaseTestCaseUsingPOStep5 {
 
         loginPage = new LoginPage(driver);
         loginPage.navigateToLoginPage(propertyReader.readProperty("url"));
-        homePage = loginPage.login(propertyReader.readProperty("username") ,propertyReader.readProperty("password"));
-
+        clientsHomePage = loginPage.login(propertyReader.readProperty("username") ,propertyReader.readProperty("password"));
     }
 
     @After
