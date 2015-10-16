@@ -22,7 +22,7 @@ public class BaseTestCaseUsingPOStep5{
 
     @Before
     public void setUp(){
-
+        System.setProperty("webdriver.chrome.driver","D:\\Bootcamp\\chromedriver_win32\\chromedriver.exe");
         propertyReader = new PropertyReader();
         driver = getAppropriateDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
