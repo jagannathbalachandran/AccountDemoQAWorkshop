@@ -2,7 +2,6 @@ package tests;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,7 +16,7 @@ public class BaseTestCaseUsingPOStep5{
     WebDriver driver;
     PropertyReader propertyReader;
     LoginPage loginPage;
-    ClientsHomePage clientsHomePage;
+    protected ClientsHomePage clientsHomePage;
 
 
 

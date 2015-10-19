@@ -20,7 +20,7 @@ public class ClientsHomePage {
         @FindBy(id = "search")
         private WebElement search_textbox;
 
-        @FindBy(className = "searchBtn123")
+        @FindBy(className = "searchBtn")
         private WebElement search_button;
 
         @FindBy(linkText = "Select Client")
