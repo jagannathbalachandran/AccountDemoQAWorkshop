@@ -3,6 +3,7 @@ package tests;
 import entities.ClientDetails;
 import entities.QuotationDetails;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import pages.ClientPage;
@@ -14,13 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestAccountDemoUsingWorkFlowsStep7 extends BaseTestCaseUsingPOStep5 {
 
-    ClientWorkflows clientWorkflows ;
-
-    @Before
-    public void setUp(){
-        super.setUp();
-        clientWorkflows = new ClientWorkflows(driver);
-    }
+     ClientWorkflows clientWorkflows  = new ClientWorkflows(driver);
 
     @Test
     @Category(Smoke.class)
