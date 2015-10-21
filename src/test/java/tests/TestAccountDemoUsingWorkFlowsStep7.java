@@ -2,16 +2,10 @@ package tests;
 
 import entities.ClientDetails;
 import entities.QuotationDetails;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import pages.ClientPage;
-import pages.LoginPage;
-import util.PropertyReader;
 import workflows.ClientWorkflows;
-
-import java.util.concurrent.TimeUnit;
 
 public class TestAccountDemoUsingWorkFlowsStep7 extends BaseTestCaseUsingPOStep5 {
 
