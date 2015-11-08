@@ -23,6 +23,8 @@
                         <!--<value>util.ExecutionListener</value>-->
                     <!--</property>-->
                     </properties>
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount>
                 </configuration>
             </plugin>
         </plugins>

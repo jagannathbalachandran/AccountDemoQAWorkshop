@@ -27,7 +27,6 @@ public class BaseTestCaseUsingPOStep5 {
     public void setUpForTest(){
         propertyReader = new PropertyReader();
         setAppropriateDriver();
-//        DriverFactory.setDriver(driver);
         failure.setDriver(driver);
         loginPage = new LoginPage(driver);
         loginPage.navigateToLoginPage(propertyReader.readProperty("url"));
