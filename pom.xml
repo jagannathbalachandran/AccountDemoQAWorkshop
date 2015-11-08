@@ -11,17 +11,20 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
+                <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.16</version>
                 <configuration>
                     <includes>
                         <include>*TestSuite.class</include>
                     </includes>
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount>
                     <properties>
                     <!--<property>-->
                         <!--<name>listener</name>-->
                         <!--<value>util.ExecutionListener</value>-->
                     <!--</property>-->
+
                     </properties>
                 </configuration>
             </plugin>
@@ -42,7 +45,6 @@
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>4.11</version>
-        <!--<scope>test</scope>-->
     </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

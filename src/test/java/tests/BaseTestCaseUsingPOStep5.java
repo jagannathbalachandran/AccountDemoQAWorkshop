@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import pages.ClientsHomePage;
 import pages.LoginPage;
-import util.DriverFactory;
 import util.PropertyReader;
 import util.ScreenShotRule;
 
@@ -21,13 +20,13 @@ public class BaseTestCaseUsingPOStep5 {
     protected ClientsHomePage clientsHomePage;
 
     @Rule
-    public ScreenShotRule failure  = new ScreenShotRule();
+    public ScreenShotRule screenShotRule = new ScreenShotRule();
 
     @Before
     public void setUpForTest(){
         propertyReader = new PropertyReader();
         setAppropriateDriver();
-        failure.setDriver(driver);
+        screenShotRule.setDriver(driver);
         loginPage = new LoginPage(driver);
         loginPage.navigateToLoginPage(propertyReader.readProperty("url"));
         clientsHomePage = loginPage.login(propertyReader.readProperty("username") ,propertyReader.readProperty("password"));
