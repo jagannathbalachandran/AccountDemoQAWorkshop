@@ -18,10 +18,10 @@
                         <include>*TestSuite.class</include>
                     </includes>
                     <properties>
-                    <property>
-                        <name>listener</name>
-                        <value>util.ExecutionListener</value>
-                    </property>
+                    <!--<property>-->
+                        <!--<name>listener</name>-->
+                        <!--<value>util.ExecutionListener</value>-->
+                    <!--</property>-->
                     </properties>
                 </configuration>
             </plugin>
@@ -36,7 +36,6 @@
             </plugin>
         </plugins>
     </reporting>
-
 
     <dependencies>
     <dependency>

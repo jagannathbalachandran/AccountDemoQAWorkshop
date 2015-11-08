@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.Test;
-import pages.ClientPage;
 
 public class AccountDemoTestUsingPOStep5 extends BaseTestCaseUsingPOStep5 {
 

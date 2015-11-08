@@ -1,16 +1,12 @@
 package tests;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class PaymentTestSetUpAndTearDownStep2 {
 
-//with code duplication , thread.sleeps etc.. just the starting point
     ChromeDriver driver;
 
 
@@ -41,5 +37,4 @@ public class PaymentTestSetUpAndTearDownStep2 {
         driver.quit();
 
     }
-
 }
