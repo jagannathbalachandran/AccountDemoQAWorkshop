@@ -17,8 +17,6 @@
                     <includes>
                         <include>*TestSuite.class</include>
                     </includes>
-                    <parallel>methods</parallel>
-                    <threadCount>2</threadCount>
                     <properties>
                     <property>
                         <name>listener</name>
