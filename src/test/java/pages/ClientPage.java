@@ -35,7 +35,7 @@ public class ClientPage {
         @FindBy(name = "commit")
         private WebElement update_button;
 
-        @FindBy(linkText = "Quotations123")
+        @FindBy(linkText = "Quotations")
         private WebElement quotations_link;
 
         @FindBy(partialLinkText = "Add New Quotation")
